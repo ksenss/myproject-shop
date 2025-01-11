@@ -1,0 +1,105 @@
+[
+    {
+        "model": "products.Product",
+        "pk": 1,
+        "fields": {
+            "name": "Rose Water Toner",
+            "price": 15.99,
+            "category": "Cosmetics",
+            "inStock": true,
+            "image": "https://us-i.makeupstore.com/s/sy/sy8mcxu5xmzd.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Aloe Vera Gel",
+            "price": 9.99,
+            "category": "Cosmetics",
+            "createdAt": "2023-10-02",
+            "inStock": false,
+            "description": "Soothing aloe vera gel for skin hydration.",
+            "image": "https://bioaqua-ukraine.com/image/cache/catalog/telo/cream/no-bqy8370-1393-1-500x500.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "Vitamin C Serum",
+            "price": 25.99,
+            "category": "Cosmetics",
+            "createdAt": "2023-10-03",
+            "inStock": true,
+            "description": "Brightening serum with vitamin C to even skin tone.",
+            "image": "https://m.media-amazon.com/images/I/51wERqBeGLL._AC_UF1000,1000_QL80_.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Hydrating Face Mask",
+            "price": 19.99,
+            "category": "Skin Care",
+            "createdAt": "2023-10-04",
+            "inStock": false,
+            "description": "Moisturizing face mask with natural ingredients.",
+            "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1695558519-laneige-65102b6c7f810.jpg?crop=1xw:1xh;center,top&resize=980:*"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Lavender Body Lotion",
+            "price": 13.99,
+            "category": "Bath & Body",
+            "createdAt": "2023-10-05",
+            "inStock": true,
+            "description": "Relaxing lavender-scented body lotion.",
+            "image": "https://vicsec.com.ua/image/cache/catalog/products/5723/26674988-jpg-1-760x1013.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Lip Balm",
+            "price": 5.99,
+            "category": "Lip Makeup",
+            "createdAt": "2023-10-06",
+            "inStock": false,
+            "description": "Moisturizing lip balm with natural ingredients.",
+            "image": "https://vicsec.com.ua/image/cache/catalog/products/5723/26674988-jpg-1-760x1013.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "Face Scrub",
+            "price": 12.99,
+            "category": "Skin Care",
+            "createdAt": "2023-10-07",
+            "inStock": true,
+            "description": "Exfoliating face scrub for a smooth complexion.",
+            "image": "https://cdn.shopify.com/s/files/1/0835/5803/files/2021-10-05_EM_VCFS_ugc_kellsbeautyreviews_480x480.jpg?v=1650925843"
+        }
+    },
+ 
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "Shampoo",
+            "price": 22.99,
+            "category": " Hair Care",
+            "createdAt": "2023-10-10",
+            "inStock": false,
+            "description": "Shampoo for smooth, shiny hair.",
+            "image": "https://images.ctfassets.net/3vnc73o2e0fb/4qqoCC7Z0DYurwtz6xEfQM/6885546aeb8bdca32680b4501500d54e/381371183876_shiny_and_soft_shampoo_400ml_1000x1000.png"
+        }
+    }
+]

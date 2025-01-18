@@ -1,7 +1,7 @@
-.products-table .product-image {
+.product-table .product-image {
     transition: transform 0.2s;
 }
 
-.products-table .product-image:hover {
+.product-table .product-image:hover {
     transform: scale(3);
 }

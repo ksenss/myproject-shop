@@ -47,7 +47,7 @@
   <div class="container">
     {% block content %}
     <h1>Our Items</h1>
-    <table class="table">
+    <table class="table product-table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -65,7 +65,7 @@
         <tr>
           <th scope="row">{{i.id}}</th>
           <td>
-            <img height="50" src="{{i.image}}" alt="{{i.title}}">
+            <img class="product-image" height="50" src="{{i.image}}" alt="{{i.title}}">
           </td>
           
           <td><a style="color: rgb(100, 21, 80)" href="/details/{{i.id}}">{{i.title | upper}}</a></td>

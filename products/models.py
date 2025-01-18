@@ -4,7 +4,7 @@ from datetime import datetime
 from django.db import models
 
 class Product(models.Model):
-    name= models.CharField(max_length=255)
+    title= models.CharField(max_length=255)
     price = models.FloatField()
     category = models.CharField(max_length=255)
     createdAt = models.DateField(default=datetime.now)

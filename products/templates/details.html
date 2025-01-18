@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="card text-center">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <a href="{{request.META.HTTP_REFERER}}" class="btn btn-outline-dark"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+        <span>Product Details</span>
+        <div></div>
+    </div>
+    <div class="card-body">
+        <div>
+            <img class="w-50" src="{{item.image}}" alt="{{item.title}}">
+        </div>
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.price}}$ - {{item.category}}</p>
+        <a href="#" class="btn btn-success">Buy</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+        Status: <span class="badge text-bg-{{item.inStock|yesno:'success,secondary'}}">
+            {{item.inStock|yesno:"In Stock,Out of Stock"}}
+        </span>
+    </div>
+</div>
+{% endblock %}

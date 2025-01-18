@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from datetime import datetime
-
+from products.forms.forms import ProductForm
 from products.models import Product
 
 
@@ -9,19 +10,37 @@ from products.models import Product
 def index(request):
      products = Product.objects.all()
      return render(request, "index.html", { "products": products })
+
+def create(request):
+    if request.method == "GET":
+        form = ProductForm()
+        return render(request, "create.html", { "form": form })
+    
+    form = ProductForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect("/")
+
+    return render(request, "create.html", { "form": form })
 def delete(request, id):
-    product = Product.objects.get(id=id)
-
-    if product is None:
-        return HttpResponse("Product not found", status=404)
+       product = get_object_or_404(Product, id=id)
+       product.delete()
+       return redirect("/")
+def details(request, id):
+    product = get_object_or_404(Product, id=id)
     
-    product.delete()
-    return redirect("/")
+    return render(request, "details.html", { "item": product })
+def edit(request, id):
+    product = get_object_or_404(Product, id=id)
 
-def details(request):
+    if request.method == "GET":
+        form = ProductForm(instance=product)
+        return render(request, "edit.html", { "form": form })
     
-    return HttpResponse(
-        """<h1>Product Details</h1> 
-        <hr> 
-        <p>Product details page</p>"""
-    )
+    form = ProductForm(request.POST, instance=product)
+
+    if form.is_valid():
+        form.save()
+        return redirect("/")
+
+    return render(request, "edit.html", { "form": form })

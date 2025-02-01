@@ -14,3 +14,10 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+class Cart(models.Model):
+    session_id = models.CharField(max_length=255)  # Обов'язкове поле
+    product = models.ForeignKey('Product', on_delete=models.CASCADE)  # Прив'язка до продукту
+    quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"Cart for session {self.session_id}"
